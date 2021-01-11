@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+
+</head>
+<body>
+    <header>
+    
+    <ol>
+        <li>
+            <!--@Html.ActionLink("about", "About", "App")-->
+            <a asp-action="About" asp-controller="App">About</a>
+        </li>
+        <li>
+            <!-- @Html.ActionLink("contact", "Contact", "App") -->
+            <a asp-action="Contact" asp-controller="App">Contact</a>
+        </li>
+        <li>
+            <!-- @Html.ActionLink("projects", "Projects", "App") -->
+            <a asp-action="Projects" asp-controller="App">Projects</a>
+        </li>
+
+        <li>
+            <a asp-action="FeverCheck" asp-controller="Temp">Fever Check</a>
+
+        </li>
+
+        <li>
+            <a asp-action="RandomNumber" asp-controller="Game">Guessing Game</a>
+
+        </li>
+
+
+    </ol>
+    </header>
+    <div class="center">
+        @RenderBody()
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+﻿@model GuessingGame
+@{
+    ViewBag.Title = "RandomNumber";
+}
+
+<div>
+    <form asp-action="RandomNumber" method="post">
+        <label asp-for="Num"></label>
+        <input asp-for="Num" />
+
+        <input type="submit" value="Random Number" />
+    </form>
+</div>
+
+<div>
+    @if (ViewBag.Result != null)
+    {
+
+        <p>@ViewBag.Result</p>
+        <p>Your Guess:@ViewBag.UserGuess</p>
+        <p>Generated Number:@ViewBag.GeneratedNumber</p>
+    }
+</div>
